@@ -21,10 +21,10 @@ public class RestConnector {
         //String baseUrl = "http://localhost:8084";
     	//List<ServiceInstance> serviceInstance = discoveryclient.getInstances("results-service");
     	//String baseUrl = serviceInstance.get(0).getUri().toString();
-    	ServiceInstance instance = loadBalancerClient.choose("manufacturer-service");
+    	ServiceInstance instance = loadBalancerClient.choose("ecommerce-manufacturer-service");
     	String baseUrl = instance.getUri().toString();
     	System.out.println(" base url of manufacturer-service : "+ baseUrl);
-    	String resultsUrl = baseUrl + "/results/" + id;
+    	String resultsUrl = baseUrl + "/manufacturers/" + id;
         RestTemplate restTemplate = new RestTemplate();
         Map<String, Integer> manufacturer = (Map) restTemplate.getForObject(resultsUrl, Object.class);
         return new Manufacturer(manufacturer.get("id"), manufacturer.get("name").toString());
