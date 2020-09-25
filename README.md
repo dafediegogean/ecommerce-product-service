@@ -1,5 +1,3 @@
-# ecommerce-product-service
-
 # E-commerce Product Service
 
 An microservice with Java 11, Spring Cloud Hoxton SR4, Open Feign for 
