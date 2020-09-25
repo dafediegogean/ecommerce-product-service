@@ -14,7 +14,7 @@ Zipkin, Spring Cloud Starter Bus and Spring Cloud Config Client
 
 > **ecommerce-product-service**
 
-Microservice responsible for providing a list or individual manufacturer.
+Microservice responsible for providing a list or individual product.
 
 
 ## Installation
